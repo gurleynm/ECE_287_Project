@@ -1,0 +1,89 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -5.014
+TNS   : -122.261
+
+Type  : Slow 1200mV 85C Model Setup 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -0.545
+TNS   : -7.825
+
+Type  : Slow 1200mV 85C Model Hold 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.284
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.891
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -4.522
+TNS   : -108.639
+
+Type  : Slow 1200mV 0C Model Setup 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.460
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -0.633
+TNS   : -9.782
+
+Type  : Slow 1200mV 0C Model Hold 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.274
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.887
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -2.105
+TNS   : -46.176
+
+Type  : Fast 1200mV 0C Model Setup 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.735
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : -0.098
+TNS   : -0.674
+
+Type  : Fast 1200mV 0C Model Hold 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'hw_image_generator:b2v_inst|ROWMOVE[10]'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'b2v_inst2|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.368
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.574
+TNS   : 0.000
+
+------------------------------------------------------------
