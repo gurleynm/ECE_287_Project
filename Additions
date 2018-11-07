@@ -1,0 +1,25 @@
+
+ vga_with_hw_test_image{
+ 
+SIGNAL 	vertical				 :	 STD_LOGIC_VECTOR(0 to 11);
+SIGNAL 	horizontal			 :	 STD_LOGIC_VECTOR(0 to 17);
+
+SIGNAL addrV 					 :  Integer range 0 to 11;
+SIGNAL addrH 					 :  Integer range 0 to 17	;
+
+PROCESS(KEYS, KEY)
+BEGIN
+	IF ((ROWMOVELEFT + ROWMOVERIGHT - 575) mod 60 = 0) THEN
+	addrH <= (ROWMOVELEFT + ROWMOVERIGHT-575)/60;
+END IF;
+END PROCESS;
+}
+
+hw_image_generator{
+Z <= "0000";
+		for i in 0 to 3 loop
+			for j in 0 to 5 loop
+				Z(i) <= '1';
+			end loop;
+		end loop;
+}
