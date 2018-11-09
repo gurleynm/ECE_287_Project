@@ -1,25 +1,17 @@
+type GREEN is array (0 TO 12) of INTEGER;
+type GREENI is array (0 TO 17) of INTEGER;
+SIGNAL GVER:GREENI:=(OTHERS=>0);
+SIGNAL GHOR:GREEN:=(OTHERS=>0);
+FOR I IN 0 TO 12 LOOP
+	GHOR(I)<=(I*30+575);
+END LOOP;
+FOR I IN 0 TO 17 LOOP
+	GVER(I)<=(I*60);
+END LOOP;
 
- vga_with_hw_test_image{
- 
-SIGNAL 	vertical				 :	 STD_LOGIC_VECTOR(0 to 11);
-SIGNAL 	horizontal			 :	 STD_LOGIC_VECTOR(0 to 17);
 
-SIGNAL addrV 					 :  Integer range 0 to 11;
-SIGNAL addrH 					 :  Integer range 0 to 17	;
-
-PROCESS(KEYS, KEY)
-BEGIN
-	IF ((ROWMOVELEFT + ROWMOVERIGHT - 575) mod 60 = 0) THEN
-	addrH <= (ROWMOVELEFT + ROWMOVERIGHT-575)/60;
+IF(SPOT((row-575)/30,column/60)='1' AND GHOR((row-575)/30)-1<row AND row<GHOR(row+2) AND GVER(column)-1<column AND column<GVER(column+1)) THEN
+	red<=(OTHERS=>'0');
+	green<=(OTHERS=>'1');
+	blue<=(OTHERS=>'0');
 END IF;
-END PROCESS;
-}
-
-hw_image_generator{
-Z <= "0000";
-		for i in 0 to 3 loop
-			for j in 0 to 5 loop
-				Z(i) <= '1';
-			end loop;
-		end loop;
-}
