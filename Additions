@@ -10,7 +10,7 @@ FOR I IN 0 TO 17 LOOP
 END LOOP;
 
 
-IF(SPOT((row-575)/30,column/60)='1' AND GHOR((row-575)/30)-1<row AND row<GHOR(row+2) AND GVER(column)-1<column AND column<GVER(column+1)) THEN
+IF(SPOT((row-575)/30,column/60)='1' AND GHOR((row-575)/30)-1<row AND row<GHOR((row-575)/30+2) AND GVER(column/60)-1<column AND column<GVER(column/60+1)) THEN
 	red<=(OTHERS=>'0');
 	green<=(OTHERS=>'1');
 	blue<=(OTHERS=>'0');
