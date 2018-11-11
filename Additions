@@ -1,17 +1,445 @@
-type GREEN is array (0 TO 12) of INTEGER;
-type GREENI is array (0 TO 17) of INTEGER;
-SIGNAL GVER:GREENI:=(OTHERS=>0);
-SIGNAL GHOR:GREEN:=(OTHERS=>0);
-FOR I IN 0 TO 12 LOOP
-	GHOR(I)<=(I*30+575);
-END LOOP;
-FOR I IN 0 TO 17 LOOP
-	GVER(I)<=(I*60);
-END LOOP;
+SIGNAL GHOR:GREE:=(OTHERS=>720);
+
+ELSIF(SPOT(0,11)='1' AND 574<row AND row<635 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,10)='1' AND 574<row AND row<635 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,9)='1' AND 574<row AND row<635 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,8)='1' AND 574<row AND row<635 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,7)='1' AND 574<row AND row<635 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,6)='1' AND 574<row AND row<635 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,5)='1' AND 574<row AND row<635 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,4)='1' AND 574<row AND row<635 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,3)='1' AND 574<row AND row<635 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,2)='1' AND 574<row AND row<635 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,1)='1' AND 574<row AND row<635 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(0,0)='1' AND 574<row AND row<635 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
 
 
-IF(SPOT((row-575)/30,column/60)='1' AND GHOR((row-575)/30)-1<row AND row<GHOR((row-575)/30+2) AND GVER(column/60)-1<column AND column<GVER(column/60+1)) THEN
-	red<=(OTHERS=>'0');
-	green<=(OTHERS=>'1');
-	blue<=(OTHERS=>'0');
-END IF;
+
+ELSIF(SPOT(1,11)='1' AND 634<row AND row<695 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,10)='1' AND 634<row AND row<695 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,9)='1' AND 634<row AND row<695 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,8)='1' AND 634<row AND row<695 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,7)='1' AND 634<row AND row<695 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,6)='1' AND 634<row AND row<695 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,5)='1' AND 634<row AND row<695 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,4)='1' AND 634<row AND row<695 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,3)='1' AND 634<row AND row<695 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,2)='1' AND 634<row AND row<695 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,1)='1' AND 634<row AND row<695 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(1,0)='1' AND 634<row AND row<695 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+	
+	
+ELSIF(SPOT(2,11)='1' AND 694<row AND row<755 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,10)='1' AND 694<row AND row<755 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,9)='1' AND 694<row AND row<755 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,8)='1' AND 694<row AND row<755 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,7)='1' AND 694<row AND row<755 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,6)='1' AND 694<row AND row<755 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,5)='1' AND 694<row AND row<755 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,4)='1' AND 694<row AND row<755 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,3)='1' AND 694<row AND row<755 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,2)='1' AND 694<row AND row<755 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,1)='1' AND 694<row AND row<755 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(2,0)='1' AND 694<row AND row<755 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+	
+ELSIF(SPOT(3,11)='1' AND 754<row AND row<815 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,10)='1' AND 754<row AND row<815 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,9)='1' AND 754<row AND row<815 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,8)='1' AND 754<row AND row<815 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,7)='1' AND 754<row AND row<815 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,6)='1' AND 754<row AND row<815 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,5)='1' AND 754<row AND row<815 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,4)='1' AND 754<row AND row<815 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,3)='1' AND 754<row AND row<815 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,2)='1' AND 754<row AND row<815 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,1)='1' AND 754<row AND row<815 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(3,0)='1' AND 754<row AND row<815 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+
+ELSIF(SPOT(4,11)='1' AND 814<row AND row<875 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,10)='1' AND 814<row AND row<875 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,9)='1' AND 814<row AND row<875 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,8)='1' AND 814<row AND row<875 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,7)='1' AND 814<row AND row<875 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,6)='1' AND 814<row AND row<875 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,5)='1' AND 814<row AND row<875 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,4)='1' AND 814<row AND row<875 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,3)='1' AND 814<row AND row<875 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,2)='1' AND 814<row AND row<875 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,1)='1' AND 814<row AND row<875 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(4,0)='1' AND 814<row AND row<875 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+
+ELSIF(SPOT(5,11)='1' AND 874<row AND row<935 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,10)='1' AND 874<row AND row<935 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,9)='1' AND 874<row AND row<935 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,8)='1' AND 874<row AND row<935 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,7)='1' AND 874<row AND row<935 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,6)='1' AND 874<row AND row<935 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,5)='1' AND 874<row AND row<935 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,4)='1' AND 874<row AND row<935 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,3)='1' AND 874<row AND row<935 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,2)='1' AND 874<row AND row<935 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,1)='1' AND 874<row AND row<935 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(5,0)='1' AND 874<row AND row<935 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+
+ELSIF(SPOT(6,11)='1' AND 934<row AND row<995 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,10)='1' AND 934<row AND row<995 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,9)='1' AND 934<row AND row<995 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,8)='1' AND 934<row AND row<995 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,7)='1' AND 934<row AND row<995 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,6)='1' AND 934<row AND row<995 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,5)='1' AND 934<row AND row<995 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,4)='1' AND 934<row AND row<995 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,3)='1' AND 934<row AND row<995 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,2)='1' AND 934<row AND row<995 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,1)='1' AND 934<row AND row<995 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(6,0)='1' AND 934<row AND row<995 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+
+ELSIF(SPOT(7,11)='1' AND 994<row AND row<1055 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,10)='1' AND 994<row AND row<1055 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,9)='1' AND 994<row AND row<1055 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,8)='1' AND 994<row AND row<1055 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,7)='1' AND 994<row AND row<1055 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,6)='1' AND 994<row AND row<1055 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,5)='1' AND 994<row AND row<1055 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,4)='1' AND 994<row AND row<1055 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,3)='1' AND 994<row AND row<1055 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,2)='1' AND 994<row AND row<1055 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,1)='1' AND 994<row AND row<1055 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(7,0)='1' AND 994<row AND row<1055 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+	
+ELSIF(SPOT(8,11)='1' AND 1054<row AND row<1115 AND 659<column AND column<720)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,10)='1' AND 1054<row AND row<1115 AND 599<column AND column<660)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,9)='1' AND 1054<row AND row<1115 AND 539<column AND column<600)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,8)='1' AND 1054<row AND row<1115 AND 489<column AND column<540)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,7)='1' AND 1054<row AND row<1115 AND 359<column AND column<490)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,6)='1' AND 1054<row AND row<1115 AND 299<column AND column<420)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,5)='1' AND 1054<row AND row<1115 AND 239<column AND column<360)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,4)='1' AND 1054<row AND row<1115 AND 179<column AND column<300)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,3)='1' AND 1054<row AND row<1115 AND 119<column AND column<240)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,2)='1' AND 1054<row AND row<1115 AND 59<column AND column<180)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,1)='1' AND 1054<row AND row<1115 AND -1<column AND column<120)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
+ELSIF(SPOT(8,0)='1' AND 1054<row AND row<1115 AND 419<column AND column<60)THEN
+	red <= (OTHERS => '0');
+	green	<= (OTHERS => '1');
+	blue <= (OTHERS => '0');
