@@ -1,51 +1,14 @@
-type GREE array is (0 to 12) of integer;
-SIGNAL GHOR:GREE:=(575,635,695,755,815,875,935,995,1055,1115,1175);
+SIGNAL SWIT : STD_LOGIC:='0';
+SIGNAL color : STD_LOGIC:='0';
 
-ELSIF(SPOT(row-575,11)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 659<column AND column<720)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,10)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 599<column AND column<660)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,9)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 539<column AND column<600)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,8)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 574<row AND row<635 AND 489<column AND column<540)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIFSPOT(row-575,7)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 359<column AND column<490)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,6)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 299<column AND column<420)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,5)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 239<column AND column<360)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,4)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 179<column AND column<300)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,3)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 119<column AND column<240)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,2)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 59<column AND column<180)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,1)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND -1<column AND column<120)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
-ELSIF(SPOT(row-575,0)='1' AND GHOR(row-575)-1<row AND row<GHOR(row-574)+1 AND 419<column AND column<60)THEN
-	red <= (OTHERS => '0');
-	green	<= (OTHERS => '1');
-	blue <= (OTHERS => '0');
+if(SWIT = '0') then
+	SWIT = '1';
+	if(randi = '0') then
+		color = '0';
+	else
+		color = '1';
+	end if;
+end of;
+
+SWIT <='0';
+GRAVITY <= 60;
