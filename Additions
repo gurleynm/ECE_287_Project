@@ -1,14 +1,66 @@
-SIGNAL SWIT : STD_LOGIC:='0';
-SIGNAL color : STD_LOGIC:='0';
-
-if(SWIT = '0') then
-	SWIT = '1';
-	if(randi = '0') then
-		color = '0';
-	else
-		color = '1';
+IF(SHAPE='1' AND (GRAVITY MOD 60 = 0 AND SPOT(addrH, GRAVITY/60)='1') OR GRAVITY = 720) THEN
+			SPOT(addrH,addrV) <= '1';
+			LOWEST(addrH) <= addrV;
+			GRAVITY <= 60;
+		ELSIF(SHAPE='0' AND (GRAVITY MOD 60 = 0 AND (SPOT(addrH, GRAVITY/60)='1' OR SPOT(addrH+1, GRAVITY/60)='1' OR SPOT(addrH+2, GRAVITY/60)='1')) OR GRAVITY = 720) THEN
+			SPOT(addrH,addrV) <= '1';
+			SPOT(addrH+1,addrV) <= '1';
+			SPOT(addrH+2,addrV) <= '1';
+			LOWEST(addrH) <= addrV;
+			LOWEST(addrH+1) <= addrV;
+			LOWEST(addrH+2) <= addrV;
+			GRAVITY <= 60;
+		ELSE
+			if(SPOT(0, 11)='1' AND  SPOT(1, 11)='1' AND  SPOT(2, 11)='1' AND  SPOT(3, 11)='1' AND  SPOT(4, 11)='1' AND  SPOT(5, 11)='1' AND  SPOT(6, 11)='1' AND  SPOT(7, 11)='1' AND  SPOT(8, 11)='1')then
+				SPOT(0, LOWEST(0))<='0';
+				SPOT(1, LOWEST(1))<='0';
+				SPOT(2, LOWEST(2))<='0';
+				SPOT(3, LOWEST(3))<='0';
+				SPOT(4, LOWEST(4))<='0';
+				SPOT(5, LOWEST(5))<='0';
+				SPOT(6, LOWEST(6))<='0';
+				SPOT(7, LOWEST(7))<='0';
+				SPOT(8, LOWEST(8))<='0';
+				
+				LOWEST(0) <= LOWEST(0) + 1;
+				LOWEST(1) <= LOWEST(1) + 1;
+				LOWEST(2) <= LOWEST(2) + 1;
+				LOWEST(3) <= LOWEST(3) + 1;
+				LOWEST(4) <= LOWEST(4) + 1;
+				LOWEST(5) <= LOWEST(5) + 1;
+				LOWEST(6) <= LOWEST(6) + 1;
+				LOWEST(7) <= LOWEST(7) + 1;
+				LOWEST(8) <= LOWEST(8) + 1;
+			end if;
+			GRAVITY <= GRAVITY + 30;
+		END IF;
+		
+		counter <= (others => '0');
 	end if;
-end of;
+end if;
 
-SWIT <='0';
-GRAVITY <= 60;
+END PROCESS;
+
+PROCESS(key1)
+BEGIN
+
+IF(key1 = '0') THEN
+	IF(SHAPE = '1')THEN
+		IF(ROWMOVELEFT + ROWMOVERIGHT + 60 > 1114) THEN
+			ROWMOVERIGHT <= 1115 - ROWMOVELEFT-60;
+		ELSIF(SPOT(addrH+1,addrV)='1') THEN
+			ROWMOVERIGHT <= ROWMOVERIGHT;
+		ELSE
+			ROWMOVERIGHT <= ROWMOVERIGHT + 60;
+		END IF;
+	ELSE
+		IF(ROWMOVELEFT + ROWMOVERIGHT + 180 > 1114) THEN
+			ROWMOVERIGHT <= 1115 - ROWMOVELEFT-180;
+		ELSIF(SPOT(addrH+3,addrV)='1') THEN
+			ROWMOVERIGHT <= ROWMOVERIGHT;
+		ELSE
+			ROWMOVERIGHT <= ROWMOVERIGHT + 60;
+		END IF;
+	END IF;
+END IF;
+END PROCESS;
