@@ -157,6 +157,7 @@ PROCESS(clk, key, key1, key2, key3)
 BEGIN
 if(key3 = '0') then
 	SPOT<=(OTHERS=>(OTHERS=>'0'));
+	SCOR <= '0000';
 end if;
 If clk'event and clk = '1' then
 	if counter < TIM then 
